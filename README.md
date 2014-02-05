@@ -2,11 +2,15 @@
 
 ## summary
 
-Html5 frame grabber to make videos from javascript animations.
+HTML frame grabber to make videos from javascript animations.
+
+HTML to video maker.
+
+Source is HTML and output is png frames.
 
 Based on [Qt5.1](http://download.qt-project.org/archive/qt/5.1/5.1.0/) webkit render engine. 
 
-## demo
+## example
 
 Based on a work of [Mr Doob](http://www.mrdoob.com/):
 
