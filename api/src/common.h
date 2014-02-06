@@ -10,7 +10,7 @@
 #include <QtGui/QtGui>
 #include <QtWidgets/QtWidgets>
 #include <QtWebKit/QtWebKit>
-#include <QtWebKitWidgets/QtWebKitWidgets>
+//#include <QtWebKitWidgets/QtWebKitWidgets>
 
 //#define SAVE_THREADED 1
 

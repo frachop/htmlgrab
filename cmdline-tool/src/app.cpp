@@ -9,7 +9,7 @@ CApplication::CApplication(int argc, char ** argv)
 ,	m_jsClock(&m_webView)
 {
 	QWebPage * pPage = new QWebPage(this);
-	
+
 	m_webView.setPage(pPage);
 	m_webView.setGeometry(QRect(QPoint(0,0),COptions::get()->m_size));
 	pPage->setViewportSize(COptions::get()->m_size);

@@ -2,7 +2,7 @@
 #define __htmlgrab__jsclock__
 
 #include <QtCore/QObject>
-#include <QtWebkitWidgets/QWebView>
+#include <QtWebKitWidgets/QWebView>
 
 namespace htmlgrab {
 
