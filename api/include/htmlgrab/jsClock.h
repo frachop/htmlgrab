@@ -19,15 +19,15 @@ namespace htmlgrab {
 		Q_PROPERTY(int m_crtFrameIndex READ getFrameIndex WRITE setFrameIndex)
 		
 	public:
-		CJsClock(QWebView* pView, QObject * pParent= 00);
-		void setView(QWebView * v);
+		CJsClock(QWebPage* pPage, QObject * pParent= 00);
+		void setPage(QWebPage * p);
 		int getFrameIndex() const { return m_crtFrameIndex; }
 		
 	public Q_SLOTS:
 		void setFrameIndex(int idx);
 		
 	private:
-		QWebView * m_pWebView;
+		QWebPage * m_pWebPage;
 		QImage     m_renderedFrame;
 		int        m_crtFrameIndex;
 	};

@@ -11,7 +11,7 @@ public:
 	CApplication(int argc, char ** argv);
 
 private:
-	QWebView           m_webView;
+	QWebPage           m_webPage;
 	htmlgrab::CJsClock m_jsClock;
 };
 

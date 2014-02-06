@@ -21,21 +21,18 @@ namespace htmlgrab {
 	}
 	//- /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	CJsClock::CJsClock(QWebView* pView, QObject * pParent)
+	CJsClock::CJsClock(QWebPage* p, QObject * pParent)
 	:	QObject(pParent)
-	,	m_pWebView(pView)
+	,	m_pWebPage(p)
 	{
 	}
 	
 	void CJsClock::setFrameIndex(int idx)
 	{
-		if (m_pWebView == 00)
+		if (m_pWebPage == 00)
 			return;
 			
-		if (m_pWebView->page() == 00)
-			return;
-	
-		const QSize renderSize(m_pWebView->page()->viewportSize());
+		const QSize renderSize(m_pWebPage->viewportSize());
 		if (renderSize.isEmpty())
 			return;
 			
@@ -50,15 +47,15 @@ namespace htmlgrab {
 			painter.setRenderHint(QPainter::Antialiasing, true);
 			painter.setRenderHint(QPainter::TextAntialiasing, true);
 			painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
-			m_pWebView->render(&painter);
+			m_pWebPage->mainFrame()->render(&painter);
 			painter.end();
 		}
 		save(m_renderedFrame, m_crtFrameIndex);
 	}
 	
-	void CJsClock::setView(QWebView * v)
+	void CJsClock::setPage(QWebPage * p)
 	{
-		m_pWebView = v;
+		m_pWebPage = p;
 	}
 	
 
