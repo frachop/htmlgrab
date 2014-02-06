@@ -11,3 +11,13 @@
 *.lai
 *.la
 *.a
+
+# Mac
+.DS_Store
+
+# Qt
+.qmake.cache
+build
+
+
+
