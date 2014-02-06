@@ -15,7 +15,6 @@ CApplication::CApplication(int argc, char ** argv)
 	*/
 	m_webPage.setViewportSize(COptions::get()->m_size);
 
-
 	const double fps = static_cast<double>(COptions::get()->m_fpsNumerator)/static_cast<double>(COptions::get()->m_fpsDenominator);
 	std::cout << fps << std::endl;
 

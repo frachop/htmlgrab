@@ -8,7 +8,7 @@ DEPS_INCLUDE= $$DEPS_PATH/include
 QT_PATH     = $$DEPS_PATH/Qt
 
 TEMPLATE = lib
-QT = core gui webkit
+QT = webkit
 CONFIG += staticlib
 
 TARGET  = htmlgrab
