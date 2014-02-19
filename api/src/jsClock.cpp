@@ -39,7 +39,7 @@ namespace htmlgrab {
 		if (m_renderedFrame.size() != renderSize)
 			m_renderedFrame = QImage( renderSize, QImage::Format_ARGB32_Premultiplied);
 			
-		std::cout << idx << std::endl;
+		qDebug() << idx;
 		m_crtFrameIndex = idx;
 		m_renderedFrame.fill(Qt::transparent);
 		{
